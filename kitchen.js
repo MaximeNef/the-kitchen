@@ -8,8 +8,13 @@ for(let list of enfant){
     
     }
    if(list.textContent ==='Fast and Furious'){
-
+    
     const first = ul.firstElementChild
     list.parentElement.insertBefore(list, first )
+    list.className = 'important'
    }
+   list.addEventListener('click' , function(){
+       alert(list.textContent)
+      
+   })
 }
