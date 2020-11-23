@@ -1,7 +1,10 @@
 const ul = document.querySelector('ul')
 const enfant = ul.childNodes;
 console.log(enfant)
+//-------------------//
 
+
+//--->  sert a la fonction clone 
 
 //for (let list of enfant) 
 
@@ -38,6 +41,8 @@ for (let i = 0; i < enfant.length; i++) {
 }
 
 
+
+
 function shuffle() {
     const oldUl = document.querySelector('ul')
     const newUl = document.createElement('ul')
@@ -53,10 +58,29 @@ function shuffle() {
     document.body.removeChild(oldUl)
     document.body.appendChild(newUl)
 
+
+
+
 }
 
 document.body.addEventListener('keyup', function (e) {
     if (e.key == 'r') {
         shuffle()
     }
+
+
 })
+
+let fAndf = document.querySelector("li")
+document.body.addEventListener('keyup', function (e) {
+    if (e.key == "d") {
+        const clone = fAndf.cloneNode(true);
+        ul.appendChild(clone)
+    }
+})
+
+
+
+
+
+
